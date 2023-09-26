@@ -4,16 +4,13 @@ import './styles.css'
 import logo from '../../../public/img/logo.png'
 
 
+
 const Navbar = () =>{
+    const navegacion = ['Mantitas', 'Accesorios', 'Cuidados', 'Tejiendo']
     return(
         <div className='navbar'>
             <div><img src={logo}/></div>
-            <div className='container'>
-               <p>Mantitas</p>
-               <p>Accesorios</p>
-               <p>Cuidados</p>
-               <p>Tejiendo</p>
-            </div>
+            <ItemListContainer router={navegacion} handleConsole={handleConsole}/>
             <CartWidget/>
         </div>
     )

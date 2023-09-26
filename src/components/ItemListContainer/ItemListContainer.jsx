@@ -1,9 +1,11 @@
 import './styles.css'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({router}) => {
     return(
-        <div className='saludo'>
-            <h1>{props.greeting}</h1>
+        <div className='container'>
+            {router.map((ruta) => (
+            <p key={ruta}>{ruta}</p>
+            ))}
         </div>
     )
 };

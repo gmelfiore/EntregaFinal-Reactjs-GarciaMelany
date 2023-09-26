@@ -1,0 +1,51 @@
+export const productos = [
+    {
+        id: 0,
+        nombre: "Alfombra Circular",
+        precio: 10000,
+        descripcion: "Hecha con lana natural de oveja de 27 micrones. Medidas: 100 cm de diámetro x 10 cm de grosor",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 1,
+        nombre: "Almohadón Caramelo",
+        precio: 5000,
+        descripcion: "Hecho con lana natural de oveja de 27 micrones. Relleno de vellón siliconado. Medidas: 20 cm de diámetro x 60 cm de largo",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 2,
+        nombre: "Almohadón redondo",
+        precio: 4000,
+        descripcion: "Hecho con lana natural de oveja de 27 micrones. Relleno de vellón siliconado. Medidas: 30 cm de diámetro x 15 cm de grosor",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 3,
+        nombre: "Cuellito",
+        precio: 5000,
+        descripcion: "Hecho con lana natural de oveja de 21 micrones, suavecito como algodón",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 4,
+        nombre: "Guantes manopla",
+        precio: 5000,
+        descripcion: "Talle único. Se adaptan hasta un talle M",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 5,
+        nombre: "Pantuflas",
+        precio: 5000,
+        descripcion: "Se hacen por talle a medida. Hechas de lana natural de oveja de 27 micrones",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+    {
+        id: 6,
+        nombre: "Mantita XL",
+        precio: "Calculá tu mantita ideal",
+        descripcion: "Elegí las medidas y tipo de lana de tu mantita ideal para presupuestarla.",
+        urlImage:"https://photos.google.com/album/AF1QipMk3tDluHL_xbdEoVy9EXRNkYxZXnY3aPzeVb1G/photo/AF1QipNcRD5Xb1qoseS3RH4n0JK-UJxJk4mhzzVkAZ02",
+    },
+]

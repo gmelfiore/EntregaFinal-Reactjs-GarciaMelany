@@ -1,14 +1,15 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';'../components/ItemListContainer'
+import Navigation from './routes/Navigation';
 
 function App() {
 
   return(
-    <main>
-      <Navbar />
-      <ItemListContainer greeting={'¡Bienvenidos a Australis Tejidos! 💕'}/>
-    </main>
+   <>
+   <Navbar />
+   <Navigation/>
+  </>
+      
   );
 
 }
