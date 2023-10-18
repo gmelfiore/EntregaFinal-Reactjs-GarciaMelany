@@ -1,25 +1,14 @@
-import { Link } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
-import Item from '../../components/Item/Item'
-import ItemList from "../../components/ItemList/ItemList";
-import { productos } from "../../products";
+import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { CartCtx } from "../../contexts/CartContext";
+import ItemListContainer from "../../components/ItemListContainer/ItemListContainer";
 
 const Home = () => {
+
     return (
-        <Layout>
-        <ItemList>
-          {
-              isLoading 
-              ? <p>Estamos tejiendo . . .</p>
-              : productos.map(prod => (
-                  <Item  
-                  id={prod.id}
-                  nombre={prod.nombre}
-                  descripcion={prod.descripcion}
-                  />
-              ))
-          }
-        </ItemList>
+      <Layout>
+        <ItemListContainer/>
       </Layout>
     )
 }
