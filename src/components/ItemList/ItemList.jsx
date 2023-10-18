@@ -1,4 +1,6 @@
-const ItemList = ({ children }) => {
+import Item from "../Item/Item";
+
+const ItemList = ({ products }) => {
     return (
       <div
         style={{
@@ -9,7 +11,7 @@ const ItemList = ({ children }) => {
           flexWrap: "wrap",
         }}
       >
-        {children}
+        {products.map((prod)=> <Item key={prod.id} {...prod}/>)}
       </div>
     );
   };

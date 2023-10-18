@@ -1,19 +1,18 @@
 import CartWidget from '../CartWidget/CartWidget'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import './styles.css'
 import { Link } from 'react-router-dom'
 
 
 
 const Navbar = () =>{
-    const navegacion = ['Mantitas', 'Accesorios', 'Cuidados', 'Tejiendo']
+    const navegacion = ['Hogar', 'Accesorios']
     return(
         <div className='navbar'>
-           <Link to={'/'}>Australis</Link> 
-           <ItemListContainer router={navegacion}/>
-           <Link to= {'/cart'}>
+        <Link to={'/'}>Australis</Link> 
+        {navegacion.map ((url) => <Link key= {url} to= {'/category/' + url}>{url}</Link>)}
+        <Link to= {'/cart'}>
             <CartWidget/>
-            </Link>
+        </Link>
         
             
         </div>

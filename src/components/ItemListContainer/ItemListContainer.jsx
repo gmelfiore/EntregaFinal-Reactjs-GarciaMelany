@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { collection } from 'firebase/firestore';
 import ItemList from "../ItemList/ItemList"
 import {db} from "../../db/db";
-import { getDocs, query } from 'firebase/firestore';
-import Item from '../Item/Item';
+import { getDocs, query, where } from 'firebase/firestore';
+
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([]);  
@@ -26,10 +26,11 @@ const ItemListContainer = () => {
             }
         ))
         
-            setProducts ([...productsData])
+            setProducts (productsData)
             setIsLoading (false)
         })
     }, [idCategory]);
+    console.log (products)
     return (
         <div>
             {isLoading ? <div>Tejiendo ideas ...</div> : <ItemList products = {products}/>}
