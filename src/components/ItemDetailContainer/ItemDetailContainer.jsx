@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ItemDetail from "../../pages/ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import {db} from "../../db/db";
 import {doc, getDoc} from "firebase/firestore";
 
-export const ItemListContainer = () =>{
+export const ItemDetailContainer = () =>{
     const [product, setProduct] = useState ({})
     const [isLoading, setIsLoading] = useState (true)
     const {idProduct} = useParams ()
@@ -29,3 +29,4 @@ export const ItemListContainer = () =>{
         </div>
     )
 }
+

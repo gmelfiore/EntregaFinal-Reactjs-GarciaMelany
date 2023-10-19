@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const ItemCount = ({stock, addToCart}) =>{
     const [count, setCount] = useState (1);
     const handleSumar = () =>{
@@ -28,3 +30,4 @@ const ItemCount = ({stock, addToCart}) =>{
         </div>
     )
 }
+export default ItemCount

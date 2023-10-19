@@ -7,8 +7,8 @@ import { Badge } from 'react-bootstrap';
 const CartWidget = () =>{
     const {cart} = useContext (CartCtx)
     return(
-        <div className='cart'>
-            <Badge bg='secondary'>{cart.length}
+        <div className='cart' style={{background: "blueViolet"}}>
+            <Badge>{cart.length}
                 <BsCart size={30} color={"white"}/>
             </Badge>
         </div>

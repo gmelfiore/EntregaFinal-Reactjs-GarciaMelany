@@ -7,10 +7,16 @@
     flex-direction: row;
     padding: 40px;
     justify-content: space-between;
-    color: white;
     font-size: 20px;
 }
 
 .logo{
     width: 200px;
+}
+
+.navegacion{
+    color: white;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
 }
