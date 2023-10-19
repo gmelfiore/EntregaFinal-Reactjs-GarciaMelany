@@ -3,7 +3,8 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from 'react';
 import { CartCtx } from '../../contexts/CartContext';
 
-const ItemDetail = (product) => {
+const ItemDetail = ({product}) => {
+    console.log (product)
 
     const {addToCart} = useContext(CartCtx)
     const addProduct = (quantity) =>{
@@ -24,7 +25,7 @@ const ItemDetail = (product) => {
                             <Card.Title>{product.nombre}</Card.Title>
                             <Card.Text>{product.descripcion}</Card.Text>
                             <Card.Text>precio: ${product.precio}</Card.Text>
-                            <ItemCount stock={product.stock} addProduct={addProduct}/>
+                            <ItemCount stock={10} addProduct={addProduct}/>
                         </Card.Body>
                     </Card>
                 )

@@ -1,12 +1,7 @@
-import React, {useContext} from 'react'
-import { CartCtx } from '../../contexts/CartContext'
-import Layout from '../../components/Layout/Layout'
-
 const Cart = ()=>{
     const {cart} = useContext (CartCtx)
-    return (
-        <Layout>
-            {
+    return(
+        {
             cart.length 
             ? <div>
                 {
@@ -17,11 +12,6 @@ const Cart = ()=>{
             </div>
             : <h1>Tu carrito está vacío</h1>
         }
-        </Layout>
-        
-        
-        
     )
+    
 }
-
-export default Cart

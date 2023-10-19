@@ -7,13 +7,19 @@ const CartContext = ({children}) =>{
 
     const addToCart = (product) => {
         if (isInCart (product.id)){
-
+            setCart (cart.map((item)=>{
+                if (item.id === product.id){
+                    return {...item, quantity: item.quantity + product.quantity}
+                }else{
+                    return item
+                }
+            }))
         }else{
             setCart([...cart, product])
         }
     }
 
-    const isInCart = ()=>{
+    const isInCart = (id)=>{
         return cart.some((product)=> product.id === id)
     }
 

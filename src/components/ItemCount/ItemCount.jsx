@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-const ItemCount = ({stock, addToCart}) =>{
+const ItemCount = ({stock, addProduct}) =>{
+    console.log (stock)
     const [count, setCount] = useState (1);
     const handleSumar = () =>{
         if (count < stock) {
@@ -15,7 +16,7 @@ const ItemCount = ({stock, addToCart}) =>{
     }
 
     const add =() =>{
-        addToCart (count)
+        addProduct (count)
         setCount (1)
     }
 
