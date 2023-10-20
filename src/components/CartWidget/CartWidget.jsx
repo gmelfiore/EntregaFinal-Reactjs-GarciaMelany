@@ -4,11 +4,12 @@ import {CartCtx} from '../../contexts/CartContext';
 import { useContext } from 'react';
 import { Badge } from 'react-bootstrap';
 
+
 const CartWidget = () =>{
-    const {cart} = useContext (CartCtx)
+    const {getCount} = useContext (CartCtx)
     return(
         <div className='cart' style={{background: "blueViolet"}}>
-            <Badge>{cart.length}
+            <Badge>{getCount()}
                 <BsCart size={30} color={"white"}/>
             </Badge>
         </div>
