@@ -1,10 +1,11 @@
 import { useContext } from "react"
 import { CartCtx } from "../../contexts/CartContext"
 import Layout from "../Layout/Layout"
-import { Card } from "react-bootstrap"
+import { Button, Card } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 const Cart = ()=>{
-    const {cart} = useContext(CartCtx);
+    const {cart, clear, precioTotal, deleteItem} = useContext(CartCtx);
     console.log (cart)
     return(
         <Layout>
@@ -19,11 +20,17 @@ const Cart = ()=>{
                             <Card.Text>precio por unidad: ${product.price}</Card.Text>
                             <Card.Text>Cantidad: {product.quantity}</Card.Text>
                         </Card.Body>
+                        <Button onClick={()=> deleteItem(product.id)}>X</Button>
                     </Card>
                     ))
-                }
+                } <p>Total a pagar: ${precioTotal()}</p>
+                <button onClick={clear}>Vaciar carrito</button>
+                <Link to={'/checkout'}><button>Finalizar compra</button></Link>
             </div> )
-            : <h1>Tu carrito está vacío</h1>
+            : <div>
+                <h1>Tu carrito está vacío</h1>
+                <Link to={'/'}><button>Ir a comprar</button></Link>
+            </div>
         }
         </Layout>
         

@@ -9,9 +9,8 @@ const CartWidget = () =>{
     const {getCount} = useContext (CartCtx)
     return(
         <div className='cart' style={{background: "blueViolet"}}>
-            <Badge>{getCount()}
-                <BsCart size={30} color={"white"}/>
-            </Badge>
+            <BsCart size={30} color={"white"}/>
+           {getCount() > 0 && <Badge>{getCount()}</Badge>}
         </div>
     );
 };

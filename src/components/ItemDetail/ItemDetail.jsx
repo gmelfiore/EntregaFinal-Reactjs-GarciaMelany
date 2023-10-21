@@ -9,6 +9,7 @@ const ItemDetail = ({product}) => {
     const {addToCart} = useContext(CartCtx)
     const addProduct = (quantity) =>{
        const productCart ={
+        id: product.id,
         image: product.imagen,
         name: product.nombre,
         price: product.precio,

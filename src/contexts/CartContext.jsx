@@ -24,15 +24,23 @@ const CartContext = ({children}) =>{
         return cart.some((product)=> product.id === id)
     }
 
+    const clear = ()=>{
+        setCart ([])
+    }
+
     const getCount = () =>{
-        return cart.reduce ((total, product) => total + product.quantity, 0)
+        return cart.reduce ((acc, item) => acc + item.quantity, 0)
     }
 
     const precioTotal = () =>{
-        return cart.reduce ((total, product) => total + product.quantity * product.precio, 0)
+        return cart.reduce ((acc, item) => acc + item.quantity * item.price, 0)
+    }
+
+    const deleteItem =(id)=>{
+        setCart (cart.filter((product)=> product.id !== id))
     }
     return (
-        <CartCtx.Provider value= {{cart, addToCart, getCount, precioTotal}}>
+        <CartCtx.Provider value= {{cart, addToCart, getCount, precioTotal, clear, deleteItem}}>
             {children}
         </CartCtx.Provider>
     )
