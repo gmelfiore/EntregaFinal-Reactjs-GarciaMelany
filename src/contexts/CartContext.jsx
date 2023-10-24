@@ -39,6 +39,7 @@ const CartContext = ({children}) =>{
     const deleteItem =(id)=>{
         setCart (cart.filter((product)=> product.id !== id))
     }
+    
     return (
         <CartCtx.Provider value= {{cart, addToCart, getCount, precioTotal, clear, deleteItem}}>
             {children}
